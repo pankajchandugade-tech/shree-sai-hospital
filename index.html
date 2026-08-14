@@ -1,0 +1,1318 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Shree Sai Multispeciality Hospital</title>
+
+<style>
+
+*{
+box-sizing:border-box;
+margin:0;
+padding:0;
+}
+
+html{
+scroll-behavior:smooth;
+}
+
+body{
+font-family:Arial,Helvetica,sans-serif;
+color:#17323b;
+background:#f6fbfc;
+line-height:1.6;
+}
+
+a{
+text-decoration:none;
+}
+
+.container{
+width:92%;
+max-width:1150px;
+margin:auto;
+}
+
+/* TOP BAR */
+
+.topbar{
+background:#082d3b;
+color:white;
+font-size:13px;
+padding:8px 0;
+}
+
+.topbar-inner{
+display:flex;
+justify-content:space-between;
+}
+
+.emergency{
+font-weight:bold;
+color:#ffb4b4;
+}
+
+/* NAVIGATION */
+
+nav{
+background:white;
+border-bottom:1px solid #dce8eb;
+position:sticky;
+top:0;
+z-index:100;
+}
+
+.nav-inner{
+height:75px;
+display:flex;
+align-items:center;
+justify-content:space-between;
+}
+
+.logo-area{
+display:flex;
+align-items:center;
+gap:12px;
+}
+
+.logo{
+width:45px;
+height:45px;
+background:#079b92;
+border-radius:12px;
+color:white;
+display:flex;
+align-items:center;
+justify-content:center;
+font-size:27px;
+font-weight:bold;
+}
+
+.logo-text strong{
+display:block;
+font-size:18px;
+color:#12313b;
+}
+
+.logo-text small{
+font-size:9px;
+letter-spacing:1.5px;
+color:#70828a;
+}
+
+.nav-links{
+display:flex;
+gap:25px;
+font-size:14px;
+}
+
+.nav-links a{
+color:#536870;
+}
+
+.nav-links a:hover{
+color:#079b92;
+}
+
+.appointment-btn{
+background:#079b92;
+color:white!important;
+padding:11px 16px;
+border-radius:8px;
+font-weight:bold;
+}
+
+/* HERO */
+
+.hero{
+background:linear-gradient(120deg,#062a38,#0b5661);
+color:white;
+}
+
+.hero-inner{
+min-height:510px;
+display:grid;
+grid-template-columns:1fr 0.9fr;
+gap:50px;
+align-items:center;
+}
+
+.tag{
+display:inline-block;
+padding:8px 13px;
+border:1px solid rgba(255,255,255,.2);
+border-radius:30px;
+font-size:11px;
+font-weight:bold;
+}
+
+.hero h1{
+font-size:58px;
+line-height:1.05;
+margin:20px 0;
+letter-spacing:-2px;
+}
+
+.hero h1 span{
+color:#72ded5;
+}
+
+.hero p{
+color:#c9e1e5;
+max-width:600px;
+font-size:16px;
+}
+
+.buttons{
+display:flex;
+gap:12px;
+margin-top:25px;
+}
+
+.btn{
+padding:13px 18px;
+border-radius:9px;
+font-weight:bold;
+}
+
+.btn-primary{
+background:white;
+color:#082d3b;
+}
+
+.btn-secondary{
+border:1px solid rgba(255,255,255,.3);
+color:white;
+}
+
+/* HERO CARD */
+
+.hero-card{
+background:white;
+color:#17323b;
+border-radius:18px;
+padding:25px;
+box-shadow:0 25px 60px rgba(0,0,0,.2);
+}
+
+.hero-card h3{
+margin-bottom:5px;
+}
+
+.hero-card p{
+font-size:12px;
+color:#687b83;
+margin-bottom:18px;
+}
+
+.quick-grid{
+display:grid;
+grid-template-columns:1fr 1fr;
+gap:10px;
+}
+
+.quick{
+border:1px solid #dce8eb;
+border-radius:10px;
+padding:14px;
+}
+
+.quick strong{
+display:block;
+}
+
+.quick span{
+font-size:11px;
+color:#6c7d84;
+}
+
+.hero-card a{
+display:block;
+background:#079b92;
+color:white;
+text-align:center;
+padding:12px;
+border-radius:8px;
+margin-top:15px;
+font-weight:bold;
+}
+
+/* STATS */
+
+.stats{
+background:white;
+border-bottom:1px solid #dce8eb;
+}
+
+.stats-inner{
+display:grid;
+grid-template-columns:repeat(4,1fr);
+padding:22px 0;
+}
+
+.stat{
+text-align:center;
+border-right:1px solid #dce8eb;
+}
+
+.stat:last-child{
+border:none;
+}
+
+.stat strong{
+display:block;
+font-size:24px;
+}
+
+.stat span{
+font-size:11px;
+color:#70828a;
+}
+
+/* SECTIONS */
+
+section{
+padding:70px 0;
+}
+
+.section-heading{
+text-align:center;
+max-width:700px;
+margin:0 auto 35px;
+}
+
+.kicker{
+color:#079b92;
+font-size:11px;
+font-weight:bold;
+letter-spacing:2px;
+}
+
+.section-heading h2{
+font-size:34px;
+margin:8px 0;
+}
+
+.section-heading p{
+color:#667980;
+font-size:14px;
+}
+
+/* DEPARTMENTS */
+
+.department-grid{
+display:grid;
+grid-template-columns:repeat(4,1fr);
+gap:16px;
+}
+
+.card{
+background:white;
+border:1px solid #dce8eb;
+border-radius:13px;
+padding:22px;
+}
+
+.icon{
+width:43px;
+height:43px;
+background:#e7f7f5;
+color:#079b92;
+border-radius:11px;
+display:flex;
+align-items:center;
+justify-content:center;
+font-size:21px;
+}
+
+.card h3{
+margin:14px 0 7px;
+font-size:17px;
+}
+
+.card p{
+font-size:12px;
+color:#6b7d84;
+}
+
+/* DOCTORS */
+
+.doctors{
+background:white;
+}
+
+.doctor-grid{
+display:grid;
+grid-template-columns:repeat(3,1fr);
+gap:18px;
+}
+
+.doctor{
+border:1px solid #dce8eb;
+padding:20px;
+border-radius:14px;
+}
+
+.avatar{
+width:62px;
+height:62px;
+border-radius:50%;
+background:#def3f1;
+color:#079b92;
+display:flex;
+align-items:center;
+justify-content:center;
+font-weight:bold;
+font-size:20px;
+}
+
+.doctor h3{
+margin:13px 0 3px;
+}
+
+.doctor p{
+font-size:12px;
+color:#6a7c83;
+}
+
+/* FACILITY */
+
+.facility{
+display:grid;
+grid-template-columns:1fr 1fr;
+gap:30px;
+align-items:center;
+}
+
+.facility-box{
+background:#082d3b;
+color:white;
+border-radius:18px;
+padding:34px;
+}
+
+.facility-box h2{
+font-size:34px;
+margin:8px 0;
+}
+
+.facility-box p{
+color:#c6d9de;
+font-size:13px;
+}
+
+.facility-list{
+display:grid;
+grid-template-columns:1fr 1fr;
+gap:10px;
+margin-top:20px;
+}
+
+.facility-list div{
+background:rgba(255,255,255,.08);
+padding:11px;
+border-radius:8px;
+font-size:12px;
+}
+
+.facility-list span{
+color:#72ded5;
+}
+
+.timings{
+background:white;
+border:1px solid #dce8eb;
+border-radius:18px;
+padding:28px;
+}
+
+.timing-row{
+display:flex;
+justify-content:space-between;
+padding:12px 0;
+border-bottom:1px solid #dce8eb;
+font-size:13px;
+}
+
+.timing-row:last-child{
+border:none;
+}
+
+.open{
+color:#0b956c;
+}
+
+/* APPOINTMENT */
+
+.appointment-section{
+background:#edf7f8;
+}
+
+.appointment-grid{
+display:grid;
+grid-template-columns:.7fr 1.3fr;
+gap:30px;
+}
+
+.appointment-info h2{
+font-size:35px;
+margin:8px 0;
+}
+
+.appointment-info p{
+color:#667980;
+font-size:14px;
+}
+
+.trust{
+margin-top:22px;
+display:grid;
+gap:10px;
+}
+
+.trust div{
+background:white;
+padding:12px;
+border-radius:9px;
+font-size:12px;
+font-weight:bold;
+}
+
+.trust span{
+color:#079b92;
+margin-right:6px;
+}
+
+/* FORM */
+
+.form{
+background:white;
+border:1px solid #dce8eb;
+border-radius:16px;
+padding:28px;
+}
+
+.form h3{
+margin-bottom:4px;
+}
+
+.form-subtitle{
+font-size:11px;
+color:#70828a;
+margin-bottom:18px;
+}
+
+.form-grid{
+display:grid;
+grid-template-columns:1fr 1fr;
+gap:13px;
+}
+
+.form-group{
+display:flex;
+flex-direction:column;
+gap:5px;
+margin-bottom:13px;
+}
+
+.form-group label{
+font-size:10px;
+font-weight:bold;
+}
+
+input,
+select,
+textarea{
+font-family:inherit;
+padding:11px;
+border:1px solid #d5e2e6;
+border-radius:8px;
+outline:none;
+}
+
+input:focus,
+select:focus,
+textarea:focus{
+border-color:#079b92;
+}
+
+textarea{
+resize:vertical;
+}
+
+.checkbox{
+display:flex;
+gap:7px;
+font-size:10px;
+color:#65777e;
+margin-bottom:15px;
+}
+
+.submit-btn{
+width:100%;
+background:#079b92;
+color:white;
+border:none;
+padding:14px;
+border-radius:8px;
+font-weight:bold;
+cursor:pointer;
+}
+
+.message{
+text-align:center;
+font-size:12px;
+font-weight:bold;
+margin-top:10px;
+}
+
+/* MAP */
+
+.map-section{
+background:white;
+text-align:center;
+}
+
+.map-box{
+background:#f6fbfc;
+border:1px solid #dce8eb;
+border-radius:14px;
+padding:35px;
+}
+
+.map-box strong{
+display:block;
+font-size:18px;
+}
+
+.map-box span{
+color:#687a82;
+font-size:12px;
+}
+
+.map-button{
+display:inline-block;
+margin-top:15px;
+background:#082d3b;
+color:white;
+padding:11px 16px;
+border-radius:8px;
+font-size:12px;
+font-weight:bold;
+}
+
+/* FOOTER */
+
+footer{
+background:#061f2b;
+color:#bcd0d6;
+padding:30px 0;
+font-size:11px;
+}
+
+.footer-inner{
+display:flex;
+justify-content:space-between;
+}
+
+footer strong{
+color:white;
+font-size:15px;
+}
+
+footer small{
+display:block;
+margin-top:5px;
+}
+
+/* MOBILE */
+
+@media(max-width:850px){
+
+.nav-links{
+display:none;
+}
+
+.hero-inner{
+grid-template-columns:1fr;
+padding:55px 0;
+}
+
+.hero h1{
+font-size:44px;
+}
+
+.department-grid{
+grid-template-columns:1fr 1fr;
+}
+
+.doctor-grid{
+grid-template-columns:1fr 1fr;
+}
+
+.stats-inner{
+grid-template-columns:1fr 1fr;
+}
+
+.facility,
+.appointment-grid{
+grid-template-columns:1fr;
+}
+
+}
+
+@media(max-width:550px){
+
+.topbar-inner,
+.footer-inner{
+flex-direction:column;
+gap:5px;
+}
+
+.department-grid,
+.doctor-grid,
+.form-grid,
+.quick-grid,
+.facility-list{
+grid-template-columns:1fr;
+}
+
+.hero h1{
+font-size:39px;
+}
+
+.form,
+.facility-box,
+.timings{
+padding:21px;
+}
+
+}
+
+</style>
+</head>
+
+<body>
+
+<div class="topbar">
+<div class="container topbar-inner">
+<span>Shree Sai Multispeciality Hospital • 20-Bed Facility</span>
+<span class="emergency">Emergency: +91 98765 43210</span>
+</div>
+</div>
+
+<nav>
+<div class="container nav-inner">
+
+<a class="logo-area" href="#">
+<div class="logo">+</div>
+<div class="logo-text">
+<strong>Shree Sai Multispeciality Hospital</strong>
+<small>20 BED MULTISPECIALITY HOSPITAL</small>
+</div>
+</a>
+
+<div class="nav-links">
+<a href="#departments">Departments</a>
+<a href="#doctors">Doctors</a>
+<a href="#facility">Facilities</a>
+<a href="#appointment">Appointment</a>
+</div>
+
+<a class="appointment-btn" href="#appointment">
+Book Appointment
+</a>
+
+</div>
+</nav>
+
+<header class="hero">
+
+<div class="container hero-inner">
+
+<div>
+
+<span class="tag">
+COMPASSIONATE CARE • MODERN FACILITIES
+</span>
+
+<h1>
+Trusted healthcare,
+<span>closer to home.</span>
+</h1>
+
+<p>
+Shree Sai Multispeciality Hospital is a modern 20-bed healthcare facility focused on accessible, compassionate and patient-friendly medical care.
+</p>
+
+<div class="buttons">
+
+<a class="btn btn-primary" href="#appointment">
+Request an Appointment →
+</a>
+
+<a class="btn btn-secondary" href="#departments">
+View Departments
+</a>
+
+</div>
+
+</div>
+
+<div class="hero-card">
+
+<h3>Patient Services</h3>
+
+<p>
+Everything you need to plan your visit.
+</p>
+
+<div class="quick-grid">
+
+<div class="quick">
+<strong>24×7</strong>
+<span>Emergency Support</span>
+</div>
+
+<div class="quick">
+<strong>20 Beds</strong>
+<span>Inpatient Facility</span>
+</div>
+
+<div class="quick">
+<strong>OPD</strong>
+<span>Daily Consultations</span>
+</div>
+
+<div class="quick">
+<strong>Diagnostics</strong>
+<span>Lab & Imaging</span>
+</div>
+
+</div>
+
+<a href="#appointment">
+Book an Appointment
+</a>
+
+</div>
+
+</div>
+
+</header>
+
+<div class="stats">
+
+<div class="container stats-inner">
+
+<div class="stat">
+<strong>20</strong>
+<span>Inpatient Beds</span>
+</div>
+
+<div class="stat">
+<strong>24×7</strong>
+<span>Emergency Support</span>
+</div>
+
+<div class="stat">
+<strong>4+</strong>
+<span>Major Departments</span>
+</div>
+
+<div class="stat">
+<strong>Patient-first</strong>
+<span>Approach</span>
+</div>
+
+</div>
+
+</div>
+
+<section id="departments">
+
+<div class="container">
+
+<div class="section-heading">
+
+<div class="kicker">
+OUR DEPARTMENTS
+</div>
+
+<h2>
+Multispeciality care under one roof
+</h2>
+
+<p>
+Our hospital provides medical and surgical services for patients and families.
+</p>
+
+</div>
+
+<div class="department-grid">
+
+<div class="card">
+<div class="icon">❤</div>
+<h3>General Medicine</h3>
+<p>
+Medical consultation and management for common and complex health conditions.
+</p>
+</div>
+
+<div class="card">
+<div class="icon">✚</div>
+<h3>General Surgery</h3>
+<p>
+Surgical consultation, procedures and post-operative care.
+</p>
+</div>
+
+<div class="card">
+<div class="icon">♀</div>
+<h3>Obstetrics & Gynaecology</h3>
+<p>
+Women's health, maternity and gynaecological consultations.
+</p>
+</div>
+
+<div class="card">
+<div class="icon">●</div>
+<h3>Paediatrics</h3>
+<p>
+Child health consultations and routine paediatric care.
+</p>
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+<section class="doctors" id="doctors">
+
+<div class="container">
+
+<div class="section-heading">
+
+<div class="kicker">
+OUR DOCTORS
+</div>
+
+<h2>
+Meet our specialist team
+</h2>
+
+<p>
+Experienced medical professionals focused on quality patient care.
+</p>
+
+</div>
+
+<div class="doctor-grid">
+
+<div class="doctor">
+
+<div class="avatar">
+DR
+</div>
+
+<h3>
+Dr. Aarav Mehta
+</h3>
+
+<p>
+MBBS, MD • General Medicine
+</p>
+
+</div>
+
+<div class="doctor">
+
+<div class="avatar">
+DR
+</div>
+
+<h3>
+Dr. Neha Shah
+</h3>
+
+<p>
+MBBS, MS • General Surgery
+</p>
+
+</div>
+
+<div class="doctor">
+
+<div class="avatar">
+DR
+</div>
+
+<h3>
+Dr. Riya Kulkarni
+</h3>
+
+<p>
+MBBS, DGO • Obstetrics & Gynaecology
+</p>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+<section id="facility">
+
+<div class="container facility">
+
+<div class="facility-box">
+
+<div class="kicker">
+OUR FACILITY
+</div>
+
+<h2>
+Designed around patient comfort.
+</h2>
+
+<p>
+A compact multispeciality hospital with essential inpatient, emergency, diagnostic and clinical support facilities.
+</p>
+
+<div class="facility-list">
+
+<div><span>✓</span> 20-bed inpatient care</div>
+<div><span>✓</span> 24×7 emergency desk</div>
+<div><span>✓</span> Pharmacy support</div>
+<div><span>✓</span> Diagnostic services</div>
+<div><span>✓</span> Procedure room</div>
+<div><span>✓</span> Patient waiting area</div>
+
+</div>
+
+</div>
+
+<div class="timings">
+
+<h3>
+OPD & Visiting Hours
+</h3>
+
+<div class="timing-row">
+<span>General Medicine</span>
+<strong>9 AM – 1 PM</strong>
+</div>
+
+<div class="timing-row">
+<span>General Surgery</span>
+<strong>10 AM – 1 PM</strong>
+</div>
+
+<div class="timing-row">
+<span>Gynaecology</span>
+<strong>11 AM – 2 PM</strong>
+</div>
+
+<div class="timing-row">
+<span>Paediatrics</span>
+<strong>5 PM – 8 PM</strong>
+</div>
+
+<div class="timing-row">
+<span>Emergency</span>
+<strong class="open">24 × 7</strong>
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+<section class="appointment-section" id="appointment">
+
+<div class="container appointment-grid">
+
+<div class="appointment-info">
+
+<div class="kicker">
+APPOINTMENTS
+</div>
+
+<h2>
+Plan your visit.
+</h2>
+
+<p>
+Send an appointment request and our hospital team can contact you to confirm the appropriate doctor, date and time.
+</p>
+
+<div class="trust">
+
+<div>
+<span>✓</span>
+Simple appointment request
+</div>
+
+<div>
+<span>✓</span>
+Quick hospital follow-up
+</div>
+
+<div>
+<span>✓</span>
+Patient-friendly process
+</div>
+
+</div>
+
+</div>
+
+<div class="form">
+
+<h3>
+Appointment Request
+</h3>
+
+<div class="form-subtitle">
+Fields marked * are required.
+</div>
+
+<form id="appointmentForm">
+
+<div class="form-grid">
+
+<div class="form-group">
+<label>PATIENT NAME *</label>
+<input
+type="text"
+name="patientName"
+required
+placeholder="Patient full name">
+</div>
+
+<div class="form-group">
+<label>MOBILE NUMBER *</label>
+<input
+type="tel"
+name="mobile"
+required
+pattern="[0-9]{10}"
+maxlength="10"
+placeholder="10-digit mobile">
+</div>
+
+<div class="form-group">
+<label>DEPARTMENT *</label>
+
+<select name="department" required>
+
+<option value="">
+Select Department
+</option>
+
+<option>
+General Medicine
+</option>
+
+<option>
+General Surgery
+</option>
+
+<option>
+Obstetrics & Gynaecology
+</option>
+
+<option>
+Paediatrics
+</option>
+
+</select>
+
+</div>
+
+<div class="form-group">
+
+<label>PREFERRED DATE</label>
+
+<input
+type="date"
+name="preferredDate">
+
+</div>
+
+<div class="form-group">
+
+<label>PREFERRED TIME</label>
+
+<select name="preferredTime">
+
+<option>Morning</option>
+<option>Afternoon</option>
+<option>Evening</option>
+
+</select>
+
+</div>
+
+<div class="form-group">
+
+<label>CONTACT METHOD</label>
+
+<select name="contactMethod">
+
+<option>Phone</option>
+<option>WhatsApp</option>
+
+</select>
+
+</div>
+
+</div>
+
+<div class="form-group">
+
+<label>BRIEF REQUIREMENT</label>
+
+<textarea
+name="message"
+rows="4"
+placeholder="Briefly describe your appointment requirement">
+</textarea>
+
+</div>
+
+<div class="checkbox">
+
+<input type="checkbox" required>
+
+<span>
+I agree to be contacted regarding this appointment request. Please do not submit passwords, OTPs, PINs or payment credentials through this form.
+</span>
+
+</div>
+
+<button
+class="submit-btn"
+type="submit">
+
+Request Appointment
+
+</button>
+
+<div
+class="message"
+id="message">
+</div>
+
+</form>
+
+</div>
+
+</div>
+
+</section>
+
+<section class="map-section">
+
+<div class="container">
+
+<div class="section-heading">
+
+<div class="kicker">
+VISIT US
+</div>
+
+<h2>
+Conveniently located for your family
+</h2>
+
+<p>
+123 Healthcare Avenue, Your City, Maharashtra
+</p>
+
+</div>
+
+<div class="map-box">
+
+<strong>
+Shree Sai Multispeciality Hospital
+</strong>
+
+<span>
+123 Healthcare Avenue, Your City, Maharashtra
+</span>
+
+<br>
+
+<a
+class="map-button"
+href="https://www.google.com/maps"
+target="_blank">
+
+Open in Google Maps →
+
+</a>
+
+</div>
+
+</div>
+
+</section>
+
+<footer>
+
+<div class="container footer-inner">
+
+<div>
+
+<strong>
+Shree Sai Multispeciality Hospital
+</strong>
+
+<small>
+20-bed multispeciality hospital
+</small>
+
+</div>
+
+<div>
+© 2026 Shree Sai Multispeciality Hospital
+</div>
+
+</div>
+
+</footer>
+
+<script>
+
+const form =
+document.getElementById("appointmentForm");
+
+const message =
+document.getElementById("message");
+
+form.addEventListener("submit", function(event){
+
+event.preventDefault();
+
+message.innerHTML =
+"Thank you! Your appointment request has been received.";
+
+message.style.color =
+"#079b92";
+
+form.reset();
+
+});
+
+</script>
+
+</body>
+</html>
