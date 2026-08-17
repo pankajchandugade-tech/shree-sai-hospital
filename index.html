@@ -7,421 +7,415 @@
 <title>Shree Sai Multispeciality Hospital</title>
 
 <style>
-* {
-  box-sizing: border-box;
+*{
+  box-sizing:border-box;
 }
 
-body {
-  margin: 0;
-  font-family: Arial, sans-serif;
-  background: #f5fafb;
-  color: #17323b;
+html{
+  scroll-behavior:smooth;
 }
 
-a {
-  text-decoration: none;
+body{
+  margin:0;
+  font-family:Arial,Helvetica,sans-serif;
+  background:#f5fafb;
+  color:#17323b;
 }
 
-.container {
-  width: 92%;
-  max-width: 1100px;
-  margin: auto;
+.container{
+  width:92%;
+  max-width:1100px;
+  margin:auto;
 }
 
-/* NAVBAR */
+/* NAVIGATION */
 
-.navbar {
-  background: white;
-  border-bottom: 1px solid #dce8eb;
-  padding: 18px 0;
-  position: sticky;
-  top: 0;
-  z-index: 10;
+.navbar{
+  background:#fff;
+  border-bottom:1px solid #dce8eb;
+  padding:16px 0;
+  position:sticky;
+  top:0;
+  z-index:100;
 }
 
-.navbar-inner {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
+.navbar-inner{
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
 }
 
-.logo {
-  display: flex;
-  align-items: center;
-  gap: 10px;
+.logo{
+  display:flex;
+  align-items:center;
+  gap:10px;
 }
 
-.logo-icon {
-  width: 42px;
-  height: 42px;
-  border-radius: 10px;
-  background: #079b92;
-  color: white;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-size: 25px;
-  font-weight: bold;
+.logo-icon{
+  width:43px;
+  height:43px;
+  border-radius:10px;
+  background:#079b92;
+  color:#fff;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  font-size:27px;
+  font-weight:bold;
 }
 
-.logo h2 {
-  margin: 0;
-  font-size: 18px;
+.logo h2{
+  margin:0;
+  font-size:18px;
 }
 
-.logo small {
-  color: #72838a;
-  font-size: 9px;
+.logo small{
+  color:#72838a;
+  font-size:9px;
 }
 
-.nav-button {
-  background: #079b92;
-  color: white;
-  padding: 11px 17px;
-  border-radius: 8px;
-  font-weight: bold;
+.nav-btn{
+  background:#079b92;
+  color:white;
+  padding:11px 17px;
+  border-radius:8px;
+  text-decoration:none;
+  font-weight:bold;
 }
 
 /* HERO */
 
-.hero {
-  background: linear-gradient(120deg, #062c3a, #0b5962);
-  color: white;
-  padding: 80px 0;
+.hero{
+  background:linear-gradient(120deg,#062c3a,#0b5962);
+  color:white;
+  padding:80px 0;
 }
 
-.hero-grid {
-  display: grid;
-  grid-template-columns: 1fr 0.8fr;
-  gap: 50px;
-  align-items: center;
+.hero-grid{
+  display:grid;
+  grid-template-columns:1fr .8fr;
+  gap:45px;
+  align-items:center;
 }
 
-.hero h1 {
-  font-size: 52px;
-  line-height: 1.1;
-  margin: 15px 0;
+.hero h1{
+  font-size:52px;
+  line-height:1.1;
+  margin:15px 0;
 }
 
-.hero h1 span {
-  color: #70ddd5;
+.hero h1 span{
+  color:#70ddd5;
 }
 
-.hero p {
-  color: #c9dfe4;
-  font-size: 16px;
+.hero p{
+  color:#c9dfe4;
+  line-height:1.7;
 }
 
-.hero-button {
-  display: inline-block;
-  background: white;
-  color: #082d3b;
-  padding: 14px 20px;
-  border-radius: 8px;
-  margin-top: 20px;
-  font-weight: bold;
+.hero-btn{
+  display:inline-block;
+  background:white;
+  color:#082d3b;
+  padding:14px 20px;
+  border-radius:8px;
+  text-decoration:none;
+  font-weight:bold;
+  margin-top:15px;
 }
 
-.hero-card {
-  background: white;
-  color: #17323b;
-  padding: 28px;
-  border-radius: 18px;
+.hero-card{
+  background:white;
+  color:#17323b;
+  padding:25px;
+  border-radius:16px;
 }
 
-.hero-card h3 {
-  margin-top: 0;
+.service{
+  border:1px solid #dce8eb;
+  border-radius:9px;
+  padding:13px;
+  margin-top:10px;
 }
 
-.service {
-  border: 1px solid #dce8eb;
-  border-radius: 9px;
-  padding: 13px;
-  margin-top: 10px;
+.service small{
+  color:#71838a;
 }
 
-.service strong {
-  display: block;
+/* SECTIONS */
+
+section{
+  padding:65px 0;
 }
 
-.service small {
-  color: #71838a;
+.section-title{
+  text-align:center;
+  margin-bottom:35px;
 }
 
-/* SECTION */
-
-section {
-  padding: 65px 0;
+.section-title span{
+  color:#079b92;
+  font-size:11px;
+  font-weight:bold;
+  letter-spacing:2px;
 }
 
-.section-title {
-  text-align: center;
-  margin-bottom: 35px;
-}
-
-.section-title span {
-  color: #079b92;
-  font-size: 11px;
-  font-weight: bold;
-  letter-spacing: 2px;
-}
-
-.section-title h2 {
-  font-size: 32px;
-  margin: 8px 0;
+.section-title h2{
+  font-size:32px;
+  margin:8px 0;
 }
 
 /* DEPARTMENTS */
 
-.department-grid {
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  gap: 15px;
+.department-grid{
+  display:grid;
+  grid-template-columns:repeat(4,1fr);
+  gap:15px;
 }
 
-.card {
-  background: white;
-  border: 1px solid #dce8eb;
-  border-radius: 12px;
-  padding: 22px;
+.card{
+  background:white;
+  border:1px solid #dce8eb;
+  border-radius:12px;
+  padding:22px;
 }
 
-.card-icon {
-  font-size: 25px;
-  color: #079b92;
+.card h3{
+  margin-bottom:8px;
 }
 
-.card h3 {
-  margin-bottom: 5px;
-}
-
-.card p {
-  color: #6b7d84;
-  font-size: 13px;
+.card p{
+  color:#6b7d84;
+  font-size:13px;
+  line-height:1.5;
 }
 
 /* DOCTORS */
 
-.doctors {
-  background: white;
+.doctors{
+  background:white;
 }
 
-.doctor-grid {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 18px;
+.doctor-grid{
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:16px;
 }
 
-.doctor {
-  border: 1px solid #dce8eb;
-  padding: 22px;
-  border-radius: 13px;
+.doctor{
+  border:1px solid #dce8eb;
+  padding:22px;
+  border-radius:12px;
 }
 
-.doctor-avatar {
-  width: 60px;
-  height: 60px;
-  border-radius: 50%;
-  background: #def3f1;
-  color: #079b92;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-weight: bold;
+.doctor-avatar{
+  width:58px;
+  height:58px;
+  border-radius:50%;
+  background:#def3f1;
+  color:#079b92;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  font-weight:bold;
 }
 
-.doctor p {
-  color: #6b7d84;
-  font-size: 13px;
+.doctor p{
+  color:#6b7d84;
+  font-size:13px;
 }
 
 /* APPOINTMENT */
 
-.appointment {
-  background: #edf7f8;
+.appointment{
+  background:#edf7f8;
 }
 
-.appointment-grid {
-  display: grid;
-  grid-template-columns: 0.7fr 1.3fr;
-  gap: 30px;
+.appointment-grid{
+  display:grid;
+  grid-template-columns:.7fr 1.3fr;
+  gap:30px;
 }
 
-.appointment-info h2 {
-  font-size: 36px;
+.appointment-info h2{
+  font-size:38px;
 }
 
-.appointment-info p {
-  color: #64777e;
+.appointment-info p{
+  color:#64777e;
+  line-height:1.6;
 }
 
-.form-box {
-  background: white;
-  padding: 28px;
-  border-radius: 15px;
-  border: 1px solid #dce8eb;
+.form-box{
+  background:white;
+  padding:28px;
+  border-radius:15px;
+  border:1px solid #dce8eb;
 }
 
-.form-group {
-  margin-bottom: 16px;
+.form-group{
+  margin-bottom:16px;
 }
 
-label {
-  display: block;
-  font-size: 11px;
-  font-weight: bold;
-  margin-bottom: 7px;
+.booking-grid{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:15px;
+}
+
+label{
+  display:block;
+  font-size:11px;
+  font-weight:bold;
+  margin-bottom:7px;
 }
 
 input,
 select,
-textarea {
-  width: 100%;
-  padding: 12px;
-  border: 1px solid #d3e1e5;
-  border-radius: 8px;
-  font-family: inherit;
+textarea{
+  width:100%;
+  padding:12px;
+  border:1px solid #d3e1e5;
+  border-radius:8px;
+  font-family:inherit;
 }
 
-textarea {
-  resize: vertical;
-}
-
-.booking-grid {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 15px;
+textarea{
+  resize:vertical;
 }
 
 /* TIME SLOTS */
 
-.slot-heading {
-  margin-top: 22px;
-  font-size: 12px;
-  font-weight: bold;
+.slot-heading{
+  margin-top:20px;
+  font-size:12px;
+  font-weight:bold;
 }
 
-.slot-grid {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 9px;
-  margin-top: 10px;
+.slot-status{
+  color:#71838a;
+  font-size:11px;
+  margin:7px 0;
 }
 
-.slot {
-  background: white;
-  border: 1px solid #cbdde1;
-  padding: 11px 5px;
-  border-radius: 8px;
-  cursor: pointer;
-  font-weight: bold;
-  color: #17323b;
+.slot-grid{
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:9px;
+  margin-top:10px;
 }
 
-.slot:hover {
-  border-color: #079b92;
-  color: #079b92;
+.time-slot{
+  background:white;
+  border:1px solid #cbdde1;
+  padding:11px 5px;
+  border-radius:8px;
+  cursor:pointer;
+  font-weight:bold;
+  color:#17323b;
 }
 
-.slot.selected {
-  background: #079b92;
-  border-color: #079b92;
-  color: white;
+.time-slot:hover{
+  border-color:#079b92;
+  color:#079b92;
 }
 
-.slot.booked {
-  background: #eeeeee;
-  color: #999;
-  text-decoration: line-through;
-  cursor: not-allowed;
+.time-slot.selected{
+  background:#079b92;
+  border-color:#079b92;
+  color:white;
 }
 
-.selected-time {
-  background: #e7f7f5;
-  border: 1px solid #b9e2dd;
-  padding: 11px;
-  margin-top: 10px;
-  border-radius: 8px;
-  font-size: 12px;
-  font-weight: bold;
-  display: none;
+.time-slot.booked{
+  background:#eeeeee;
+  border-color:#dddddd;
+  color:#999;
+  text-decoration:line-through;
+  cursor:not-allowed;
 }
 
-.submit {
-  width: 100%;
-  background: #079b92;
-  color: white;
-  border: none;
-  padding: 14px;
-  border-radius: 8px;
-  font-weight: bold;
-  cursor: pointer;
+.selected-time{
+  background:#e7f7f5;
+  border:1px solid #b9e2dd;
+  padding:11px;
+  margin-top:10px;
+  border-radius:8px;
+  font-size:12px;
+  display:none;
 }
 
-.submit:disabled {
-  opacity: 0.6;
+.submit-btn{
+  width:100%;
+  background:#079b92;
+  color:white;
+  border:0;
+  padding:14px;
+  border-radius:8px;
+  font-weight:bold;
+  cursor:pointer;
 }
 
-.message {
-  text-align: center;
-  margin-top: 12px;
-  font-size: 12px;
-  font-weight: bold;
+.submit-btn:disabled{
+  opacity:.6;
+  cursor:not-allowed;
+}
+
+.message{
+  text-align:center;
+  margin-top:12px;
+  font-size:12px;
+  font-weight:bold;
 }
 
 /* FOOTER */
 
-footer {
-  background: #061f2b;
-  color: #c2d2d7;
-  padding: 30px 0;
-  text-align: center;
+footer{
+  background:#061f2b;
+  color:#c2d2d7;
+  padding:30px 0;
+  text-align:center;
 }
 
-footer strong {
-  color: white;
+footer strong{
+  color:white;
 }
 
 /* MOBILE */
 
-@media(max-width:800px) {
+@media(max-width:800px){
 
   .hero-grid,
-  .appointment-grid {
-    grid-template-columns: 1fr;
+  .appointment-grid{
+    grid-template-columns:1fr;
   }
 
-  .department-grid {
-    grid-template-columns: 1fr 1fr;
+  .department-grid{
+    grid-template-columns:1fr 1fr;
   }
 
-  .doctor-grid {
-    grid-template-columns: 1fr;
+  .doctor-grid{
+    grid-template-columns:1fr;
   }
 
 }
 
-@media(max-width:550px) {
+@media(max-width:550px){
 
-  .hero h1 {
-    font-size: 38px;
+  .hero h1{
+    font-size:38px;
   }
 
   .department-grid,
-  .booking-grid {
-    grid-template-columns: 1fr;
+  .booking-grid{
+    grid-template-columns:1fr;
   }
 
-  .slot-grid {
-    grid-template-columns: repeat(2, 1fr);
+  .slot-grid{
+    grid-template-columns:repeat(2,1fr);
   }
 
-  .navbar-inner {
-    gap: 10px;
-  }
-
-  .logo h2 {
-    font-size: 14px;
+  .logo h2{
+    font-size:14px;
   }
 
 }
@@ -430,9 +424,11 @@ footer strong {
 
 <body>
 
+
 <!-- NAVBAR -->
 
 <div class="navbar">
+
   <div class="container navbar-inner">
 
     <div class="logo">
@@ -440,17 +436,27 @@ footer strong {
       <div class="logo-icon">+</div>
 
       <div>
+
         <h2>Shree Sai Multispeciality Hospital</h2>
-        <small>20 BED MULTISPECIALITY HOSPITAL</small>
+
+        <small>
+          20 BED MULTISPECIALITY HOSPITAL
+        </small>
+
       </div>
 
     </div>
 
-    <a href="#appointment" class="nav-button">
+    <a
+      href="#appointment"
+      class="nav-btn">
+
       Book Appointment
+
     </a>
 
   </div>
+
 </div>
 
 
@@ -462,47 +468,89 @@ footer strong {
 
     <div>
 
-      <small>COMPASSIONATE CARE • MODERN FACILITIES</small>
+      <small>
+        COMPASSIONATE CARE • MODERN FACILITIES
+      </small>
 
       <h1>
+
         Trusted healthcare,
         <span>closer to home.</span>
+
       </h1>
 
       <p>
-        Shree Sai Multispeciality Hospital provides
-        accessible, compassionate and patient-friendly
-        healthcare services.
+
+        Shree Sai Multispeciality Hospital
+        provides accessible, compassionate
+        and patient-friendly healthcare services.
+
       </p>
 
-      <a href="#appointment" class="hero-button">
+      <a
+        href="#appointment"
+        class="hero-btn">
+
         Book an Appointment →
+
       </a>
 
     </div>
+
 
     <div class="hero-card">
 
       <h3>Patient Services</h3>
 
       <div class="service">
+
         <strong>24×7 Emergency</strong>
-        <small>Emergency support available</small>
+
+        <br>
+
+        <small>
+          Emergency support available
+        </small>
+
       </div>
 
+
       <div class="service">
+
         <strong>20 Beds</strong>
-        <small>Inpatient facility</small>
+
+        <br>
+
+        <small>
+          Inpatient facility
+        </small>
+
       </div>
 
+
       <div class="service">
+
         <strong>OPD Services</strong>
-        <small>Doctor consultations</small>
+
+        <br>
+
+        <small>
+          Doctor consultations
+        </small>
+
       </div>
 
+
       <div class="service">
+
         <strong>Diagnostics</strong>
-        <small>Laboratory and diagnostic support</small>
+
+        <br>
+
+        <small>
+          Laboratory and diagnostic support
+        </small>
+
       </div>
 
     </div>
@@ -520,44 +568,68 @@ footer strong {
 
     <div class="section-title">
 
-      <span>OUR DEPARTMENTS</span>
+      <span>
+        OUR DEPARTMENTS
+      </span>
 
-      <h2>Multispeciality care under one roof</h2>
+      <h2>
+        Multispeciality care under one roof
+      </h2>
 
     </div>
+
 
     <div class="department-grid">
 
       <div class="card">
-        <div class="card-icon">❤</div>
-        <h3>General Medicine</h3>
+
+        <h3>
+          ❤ General Medicine
+        </h3>
+
         <p>
           Medical consultation and management.
         </p>
+
       </div>
 
+
       <div class="card">
-        <div class="card-icon">✚</div>
-        <h3>General Surgery</h3>
+
+        <h3>
+          ✚ General Surgery
+        </h3>
+
         <p>
           Surgical consultation and procedures.
         </p>
+
       </div>
 
+
       <div class="card">
-        <div class="card-icon">♀</div>
-        <h3>Gynaecology</h3>
+
+        <h3>
+          ♀ Gynaecology
+        </h3>
+
         <p>
           Women's health and maternity care.
         </p>
+
       </div>
 
+
       <div class="card">
-        <div class="card-icon">●</div>
-        <h3>Paediatrics</h3>
+
+        <h3>
+          ● Paediatrics
+        </h3>
+
         <p>
           Child health and paediatric care.
         </p>
+
       </div>
 
     </div>
@@ -575,19 +647,28 @@ footer strong {
 
     <div class="section-title">
 
-      <span>OUR DOCTORS</span>
+      <span>
+        OUR DOCTORS
+      </span>
 
-      <h2>Meet our medical team</h2>
+      <h2>
+        Meet our medical team
+      </h2>
 
     </div>
+
 
     <div class="doctor-grid">
 
       <div class="doctor">
 
-        <div class="doctor-avatar">DR</div>
+        <div class="doctor-avatar">
+          DR
+        </div>
 
-        <h3>Dr. Aarav Mehta</h3>
+        <h3>
+          Dr. Aarav Mehta
+        </h3>
 
         <p>
           MBBS, MD • General Medicine
@@ -595,11 +676,16 @@ footer strong {
 
       </div>
 
+
       <div class="doctor">
 
-        <div class="doctor-avatar">DR</div>
+        <div class="doctor-avatar">
+          DR
+        </div>
 
-        <h3>Dr. Neha Shah</h3>
+        <h3>
+          Dr. Neha Shah
+        </h3>
 
         <p>
           MBBS, MS • General Surgery
@@ -607,11 +693,16 @@ footer strong {
 
       </div>
 
+
       <div class="doctor">
 
-        <div class="doctor-avatar">DR</div>
+        <div class="doctor-avatar">
+          DR
+        </div>
 
-        <h3>Dr. Riya Kulkarni</h3>
+        <h3>
+          Dr. Riya Kulkarni
+        </h3>
 
         <p>
           MBBS, DGO • Obstetrics & Gynaecology
@@ -628,48 +719,87 @@ footer strong {
 
 <!-- APPOINTMENT -->
 
-<section class="appointment" id="appointment">
+<section
+  class="appointment"
+  id="appointment">
 
   <div class="container appointment-grid">
 
+
     <div class="appointment-info">
 
-      <small>APPOINTMENTS</small>
+      <div
+        class="section-title"
+        style="text-align:left">
 
-      <h2>Plan your visit.</h2>
+        <span>
+          APPOINTMENTS
+        </span>
+
+        <h2>
+          Plan your visit.
+        </h2>
+
+      </div>
+
 
       <p>
-        Choose a doctor, select your preferred date
-        and choose an available 30-minute appointment slot.
+        Choose your doctor, appointment date
+        and available 30-minute time slot.
       </p>
 
-      <br>
+      <p>
+        ✓ Choose doctor
+      </p>
 
-      <p>✓ Choose your doctor</p>
-      <p>✓ Choose appointment date</p>
-      <p>✓ Select 30-minute time slot</p>
-      <p>✓ Submit patient details</p>
+      <p>
+        ✓ Choose appointment date
+      </p>
+
+      <p>
+        ✓ See available slots
+      </p>
+
+      <p>
+        ✓ Book appointment
+      </p>
+
+      <p>
+        ✓ Save to Google Calendar
+      </p>
+
+      <p>
+        ✓ Save patient record to Google Sheet
+      </p>
 
     </div>
 
 
     <div class="form-box">
 
-      <h2>Book an Appointment</h2>
+      <h2>
+        Book an Appointment
+      </h2>
 
-      <p style="font-size:12px;color:#71838a;">
+      <p
+        style="
+        font-size:12px;
+        color:#71838a;
+        ">
+
         Select doctor, date and appointment time.
+
       </p>
 
-      <br>
 
-
-      <form id="appointmentForm">
+      <form
+        id="appointmentForm">
 
 
         <!-- DOCTOR + DATE -->
 
         <div class="booking-grid">
+
 
           <div class="form-group">
 
@@ -677,7 +807,10 @@ footer strong {
               SELECT DOCTOR *
             </label>
 
-            <select id="doctor" name="doctor" required>
+            <select
+              id="doctor"
+              name="doctor"
+              required>
 
               <option value="">
                 Select Doctor
@@ -687,7 +820,8 @@ footer strong {
                 value="Dr. Aarav Mehta"
                 data-department="General Medicine">
 
-                Dr. Aarav Mehta — General Medicine
+                Dr. Aarav Mehta —
+                General Medicine
 
               </option>
 
@@ -695,7 +829,8 @@ footer strong {
                 value="Dr. Neha Shah"
                 data-department="General Surgery">
 
-                Dr. Neha Shah — General Surgery
+                Dr. Neha Shah —
+                General Surgery
 
               </option>
 
@@ -703,7 +838,8 @@ footer strong {
                 value="Dr. Riya Kulkarni"
                 data-department="Obstetrics & Gynaecology">
 
-                Dr. Riya Kulkarni — Obstetrics & Gynaecology
+                Dr. Riya Kulkarni —
+                Obstetrics & Gynaecology
 
               </option>
 
@@ -741,8 +877,7 @@ footer strong {
             type="text"
             id="department"
             name="department"
-            readonly
-            placeholder="Automatically selected">
+            readonly>
 
         </div>
 
@@ -755,15 +890,29 @@ footer strong {
 
         </div>
 
+
+        <div
+          id="slotStatus"
+          class="slot-status">
+
+          Select a doctor and date.
+
+        </div>
+
+
         <div
           id="slotGrid"
           class="slot-grid">
+
         </div>
 
+
         <div
-          id="selectedTime"
+          id="selectedTimeBox"
           class="selected-time">
+
         </div>
+
 
         <input
           type="hidden"
@@ -772,12 +921,11 @@ footer strong {
           required>
 
 
-        <br>
+        <!-- PATIENT NAME -->
 
-
-        <!-- PATIENT -->
-
-        <div class="form-group">
+        <div
+          class="form-group"
+          style="margin-top:20px">
 
           <label>
             PATIENT NAME *
@@ -792,7 +940,10 @@ footer strong {
         </div>
 
 
+        <!-- MOBILE -->
+
         <div class="booking-grid">
+
 
           <div class="form-group">
 
@@ -817,7 +968,8 @@ footer strong {
               CONTACT METHOD
             </label>
 
-            <select name="contactMethod">
+            <select
+              name="contactMethod">
 
               <option>
                 Phone
@@ -834,7 +986,7 @@ footer strong {
         </div>
 
 
-        <!-- REASON -->
+        <!-- REQUIREMENT -->
 
         <div class="form-group">
 
@@ -853,21 +1005,28 @@ footer strong {
 
         <!-- AGREEMENT -->
 
-        <div style="font-size:11px;margin-bottom:15px;">
+        <label
+          style="
+          font-weight:normal;
+          margin-bottom:15px;
+          ">
 
           <input
             type="checkbox"
-            required>
+            required
+            style="width:auto">
 
           I agree to be contacted regarding this appointment.
 
-        </div>
+        </label>
 
+
+        <!-- SUBMIT -->
 
         <button
           type="submit"
-          class="submit"
-          id="submitButton">
+          id="submitButton"
+          class="submit-btn">
 
           Confirm Appointment
 
@@ -877,6 +1036,7 @@ footer strong {
         <div
           id="message"
           class="message">
+
         </div>
 
 
@@ -893,471 +1053,728 @@ footer strong {
 
 <footer>
 
-  <div class="container">
+  <strong>
+    Shree Sai Multispeciality Hospital
+  </strong>
 
-    <strong>
-      Shree Sai Multispeciality Hospital
-    </strong>
+  <br>
 
-    <br>
+  20-bed multispeciality hospital
 
-    20-bed multispeciality hospital
+  <br><br>
 
-    <br><br>
-
-    © 2026 Shree Sai Multispeciality Hospital
-
-  </div>
+  © 2026 Shree Sai Multispeciality Hospital
 
 </footer>
 
 
 <script>
 
-/* ==========================================
+
+/* =====================================================
    GOOGLE APPS SCRIPT URL
-   ========================================== */
+   ===================================================== */
 
 const GOOGLE_SCRIPT_URL =
-"https://script.google.com/macros/s/AKfycbwEnBYXxJPmpGkz2Ci4MQFq81IvwPk9erNFTWcAFKodU4bPZlDBUQcVcyFgrUeJOor0Ng/exec";
+"https://script.google.com/macros/s/AKfycbxleLB2hDcEyzphzAiaFMUmc3vSWSx9oZtkiMl9Eq2dWoDCxVFhFW-36czGBB9q-pwbyQ/exec";
 
 
-/* ==========================================
-   GET ELEMENTS
-   ========================================== */
+/* =====================================================
+   ELEMENTS
+   ===================================================== */
 
 const form =
-document.getElementById("appointmentForm");
+document.getElementById(
+  "appointmentForm"
+);
 
 const doctor =
-document.getElementById("doctor");
+document.getElementById(
+  "doctor"
+);
 
 const dateInput =
-document.getElementById("appointmentDate");
+document.getElementById(
+  "appointmentDate"
+);
 
 const department =
-document.getElementById("department");
+document.getElementById(
+  "department"
+);
 
 const slotGrid =
-document.getElementById("slotGrid");
+document.getElementById(
+  "slotGrid"
+);
 
-const selectedTime =
-document.getElementById("selectedTime");
+const slotStatus =
+document.getElementById(
+  "slotStatus"
+);
+
+const selectedTimeBox =
+document.getElementById(
+  "selectedTimeBox"
+);
 
 const appointmentTime =
-document.getElementById("appointmentTime");
+document.getElementById(
+  "appointmentTime"
+);
 
 const message =
-document.getElementById("message");
+document.getElementById(
+  "message"
+);
 
 const submitButton =
-document.getElementById("submitButton");
+document.getElementById(
+  "submitButton"
+);
 
 
-/* ==========================================
-   APPOINTMENT TIMES
-   ========================================== */
+/* =====================================================
+   AVAILABLE TIMES
+   ===================================================== */
 
-const SLOTS = [
+const TIME_SLOTS = [
 
-"09:00",
-"09:30",
-"10:00",
-"10:30",
-"11:00",
-"11:30",
-"12:00",
-"12:30",
+  "09:00",
+  "09:30",
 
-"17:00",
-"17:30",
-"18:00",
-"18:30",
-"19:00",
-"19:30"
+  "10:00",
+  "10:30",
+
+  "11:00",
+  "11:30",
+
+  "12:00",
+  "12:30",
+
+  "17:00",
+  "17:30",
+
+  "18:00",
+  "18:30",
+
+  "19:00",
+  "19:30"
 
 ];
 
 
-/* ==========================================
-   PREVENT PAST DATES
-   ========================================== */
+/* =====================================================
+   TODAY AS MINIMUM DATE
+   ===================================================== */
 
 const today =
 new Date();
 
-const todayString =
+dateInput.min =
+
 today.getFullYear() +
 "-" +
-String(today.getMonth() + 1).padStart(2,"0") +
+
+String(
+  today.getMonth() + 1
+).padStart(2,"0") +
+
 "-" +
-String(today.getDate()).padStart(2,"0");
 
-dateInput.min =
-todayString;
+String(
+  today.getDate()
+).padStart(2,"0");
 
 
-/* ==========================================
-   DOCTOR SELECT
-   ========================================== */
+/* =====================================================
+   DOCTOR CHANGE
+   ===================================================== */
 
 doctor.addEventListener(
 "change",
 function(){
 
-const selected =
-doctor.options[
-doctor.selectedIndex
-];
+  const selected =
+  doctor.options[
+    doctor.selectedIndex
+  ];
 
-department.value =
-selected.dataset.department || "";
+  department.value =
+    selected.dataset.department || "";
 
-resetTime();
+  clearTimeSelection();
 
-if(
-doctor.value &&
-dateInput.value
-){
+  if(
+    doctor.value &&
+    dateInput.value
+  ){
 
-showTimeSlots();
+    loadAvailableSlots();
 
-}
+  }
 
-}
-);
+});
 
 
-/* ==========================================
-   DATE SELECT
-   ========================================== */
+/* =====================================================
+   DATE CHANGE
+   ===================================================== */
 
 dateInput.addEventListener(
 "change",
 function(){
 
-resetTime();
+  clearTimeSelection();
 
-if(
-doctor.value &&
-dateInput.value
+  if(
+    doctor.value &&
+    dateInput.value
+  ){
+
+    loadAvailableSlots();
+
+  }
+
+});
+
+
+/* =====================================================
+   CLEAR TIME
+   ===================================================== */
+
+function clearTimeSelection(){
+
+  appointmentTime.value =
+    "";
+
+  selectedTimeBox.style.display =
+    "none";
+
+  selectedTimeBox.innerHTML =
+    "";
+
+  slotGrid.innerHTML =
+    "";
+
+  slotStatus.innerText =
+    "Loading available times...";
+
+}
+
+
+/* =====================================================
+   LOAD AVAILABLE SLOTS
+   ===================================================== */
+
+function loadAvailableSlots(){
+
+  slotGrid.innerHTML =
+    "";
+
+  slotStatus.innerText =
+    "Checking Google Calendar...";
+
+
+  /*
+    Show all slots immediately.
+  */
+
+  renderSlots([]);
+
+
+  /*
+    Ask Google Apps Script which
+    slots are already booked.
+  */
+
+  fetch(
+    GOOGLE_SCRIPT_URL +
+    "?date=" +
+    encodeURIComponent(
+      dateInput.value
+    )
+  )
+
+  .then(
+    function(response){
+
+      return response.json();
+
+    }
+  )
+
+  .then(
+    function(data){
+
+      if(
+        data.success
+      ){
+
+        renderSlots(
+          data.bookedSlots || []
+        );
+
+        slotStatus.innerText =
+          "Green/normal slots are available.";
+
+      }
+
+      else{
+
+        slotStatus.innerText =
+          "Available times are shown below.";
+
+        console.log(
+          data.message
+        );
+
+      }
+
+    }
+  )
+
+  .catch(
+    function(error){
+
+      console.log(
+        "Calendar check:",
+        error
+      );
+
+      /*
+        Keep slots visible.
+      */
+
+      slotStatus.innerText =
+        "Available times are shown below.";
+
+    }
+  );
+
+}
+
+
+/* =====================================================
+   CREATE TIME BUTTONS
+   ===================================================== */
+
+function renderSlots(
+  bookedSlots
 ){
 
-showTimeSlots();
+  slotGrid.innerHTML =
+    "";
+
+
+  TIME_SLOTS.forEach(
+    function(time){
+
+      const button =
+        document.createElement(
+          "button"
+        );
+
+      button.type =
+        "button";
+
+      button.className =
+        "time-slot";
+
+      button.innerText =
+        formatTime(time);
+
+
+      /*
+        Is this time already booked?
+      */
+
+      if(
+        bookedSlots.indexOf(
+          time
+        ) !== -1
+      ){
+
+        button.classList.add(
+          "booked"
+        );
+
+        button.disabled =
+          true;
+
+        button.title =
+          "Already booked";
+
+      }
+
+
+      /*
+        Available slot.
+      */
+
+      else{
+
+        button.addEventListener(
+          "click",
+          function(){
+
+            document
+            .querySelectorAll(
+              ".time-slot"
+            )
+            .forEach(
+              function(item){
+
+                item.classList.remove(
+                  "selected"
+                );
+
+              }
+            );
+
+
+            button.classList.add(
+              "selected"
+            );
+
+
+            appointmentTime.value =
+              time;
+
+
+            selectedTimeBox.style.display =
+              "block";
+
+
+            selectedTimeBox.innerHTML =
+
+              "Selected appointment: " +
+
+              "<strong>" +
+
+              formatDate(
+                dateInput.value
+              ) +
+
+              " at " +
+
+              formatTime(
+                time
+              ) +
+
+              "</strong>";
+
+          }
+        );
+
+      }
+
+
+      slotGrid.appendChild(
+        button
+      );
+
+    }
+  );
 
 }
 
-}
-);
 
-
-/* ==========================================
-   RESET TIME
-   ========================================== */
-
-function resetTime(){
-
-appointmentTime.value =
-"";
-
-selectedTime.style.display =
-"none";
-
-selectedTime.innerHTML =
-"";
-
-slotGrid.innerHTML =
-"";
-
-}
-
-
-/* ==========================================
-   SHOW TIME SLOTS
-
-   IMPORTANT:
-   These slots are displayed locally.
-   Google Calendar is NOT required for
-   the buttons to appear.
-   ========================================== */
-
-function showTimeSlots(){
-
-slotGrid.innerHTML =
-"";
-
-SLOTS.forEach(
-function(time){
-
-const button =
-document.createElement(
-"button"
-);
-
-button.type =
-"button";
-
-button.className =
-"slot";
-
-button.innerText =
-formatTime(time);
-
-
-button.onclick =
-function(){
-
-document
-.querySelectorAll(".slot")
-.forEach(
-function(item){
-
-item.classList.remove(
-"selected"
-);
-
-}
-);
-
-button.classList.add(
-"selected"
-);
-
-appointmentTime.value =
-time;
-
-selectedTime.style.display =
-"block";
-
-selectedTime.innerHTML =
-"Selected appointment: <strong>" +
-formatDate(dateInput.value) +
-" at " +
-formatTime(time) +
-"</strong>";
-
-};
-
-slotGrid.appendChild(
-button
-);
-
-}
-);
-
-}
-
-
-/* ==========================================
+/* =====================================================
    FORMAT TIME
-   ========================================== */
+   ===================================================== */
 
-function formatTime(time){
+function formatTime(
+  time
+){
 
-const parts =
-time.split(":");
+  const parts =
+    time.split(":");
 
-let hour =
-parseInt(parts[0]);
+  let hour =
+    Number(
+      parts[0]
+    );
 
-const minute =
-parts[1];
+  const minute =
+    parts[1];
 
-const ampm =
-hour >= 12
-? "PM"
-: "AM";
+  const suffix =
+    hour >= 12
+      ? "PM"
+      : "AM";
 
-hour =
-hour % 12;
+  hour =
+    hour % 12 || 12;
 
-if(hour === 0){
-hour = 12;
+  return (
+    hour +
+    ":" +
+    minute +
+    " " +
+    suffix
+  );
+
 }
 
-return (
-hour +
-":" +
-minute +
-" " +
-ampm
-);
 
-}
-
-
-/* ==========================================
+/* =====================================================
    FORMAT DATE
-   ========================================== */
+   ===================================================== */
 
-function formatDate(date){
+function formatDate(
+  value
+){
 
-const d =
-new Date(
-date + "T00:00:00"
-);
+  const date =
+    new Date(
+      value +
+      "T00:00:00"
+    );
 
-return d.toLocaleDateString(
-"en-IN",
-{
-day:"numeric",
-month:"short",
-year:"numeric"
+  return date.toLocaleDateString(
+    "en-IN",
+    {
+      day:"numeric",
+      month:"short",
+      year:"numeric"
+    }
+  );
+
 }
-);
-
-}
 
 
-/* ==========================================
+/* =====================================================
    SUBMIT APPOINTMENT
-   ========================================== */
+   ===================================================== */
 
 form.addEventListener(
 "submit",
 function(event){
 
-event.preventDefault();
+  event.preventDefault();
 
 
-/*
-Check time.
-*/
+  /*
+    Time is required.
+  */
 
-if(
-appointmentTime.value === ""
-){
+  if(
+    !appointmentTime.value
+  ){
 
-message.innerText =
-"Please select an appointment time.";
+    message.innerText =
+      "Please select an available time slot.";
 
-message.style.color =
-"#b42318";
+    message.style.color =
+      "#b42318";
 
-return;
+    return;
 
-}
-
-
-/*
-Collect form data.
-*/
-
-const formData =
-new FormData(form);
+  }
 
 
-const booking = {
+  /*
+    Collect form.
+  */
 
-patientName:
-formData.get("patientName"),
-
-mobile:
-formData.get("mobile"),
-
-doctor:
-formData.get("doctor"),
-
-department:
-formData.get("department"),
-
-date:
-formData.get("date"),
-
-time:
-formData.get("time"),
-
-reason:
-formData.get("reason"),
-
-contactMethod:
-formData.get("contactMethod")
-
-};
+  const formData =
+    new FormData(
+      form
+    );
 
 
-submitButton.disabled =
-true;
+  const booking = {
 
-submitButton.innerText =
-"Booking...";
+    patientName:
+      formData.get(
+        "patientName"
+      ),
 
-message.innerText =
-"Sending appointment request...";
+    mobile:
+      formData.get(
+        "mobile"
+      ),
 
-message.style.color =
-"#079b92";
+    doctor:
+      formData.get(
+        "doctor"
+      ),
+
+    department:
+      formData.get(
+        "department"
+      ),
+
+    date:
+      formData.get(
+        "date"
+      ),
+
+    time:
+      formData.get(
+        "time"
+      ),
+
+    reason:
+      formData.get(
+        "reason"
+      ) || "",
+
+    contactMethod:
+      formData.get(
+        "contactMethod"
+      ) || "Phone"
+
+  };
 
 
-/*
-Send to Google Apps Script.
-*/
+  /*
+    Disable button.
+  */
 
-fetch(
-GOOGLE_SCRIPT_URL,
-{
+  submitButton.disabled =
+    true;
 
-method:"POST",
+  submitButton.innerText =
+    "Booking...";
 
-mode:"no-cors",
 
-headers:{
-"Content-Type":
-"text/plain;charset=utf-8"
-},
+  message.innerText =
+    "Sending appointment to hospital...";
 
-body:
-JSON.stringify(booking)
+  message.style.color =
+    "#079b92";
 
-}
-)
 
-.then(
-function(){
+  /*
+    Send to Google Apps Script.
+  */
 
-message.innerText =
-"Appointment request submitted successfully.";
+  fetch(
+    GOOGLE_SCRIPT_URL,
+    {
 
-message.style.color =
-"#079b92";
+      method:"POST",
 
-form.reset();
+      headers:{
+        "Content-Type":
+        "text/plain;charset=utf-8"
+      },
 
-department.value =
-"";
+      body:
+        JSON.stringify(
+          booking
+        )
 
-resetTime();
+    }
+  )
 
-}
-)
+  .then(
+    function(response){
 
-.catch(
-function(error){
+      return response.json();
 
-console.error(error);
+    }
+  )
 
-message.innerText =
-"Unable to submit appointment. Please call the hospital.";
+  .then(
+    function(result){
 
-message.style.color =
-"#b42318";
+      if(
+        result.success
+      ){
 
-}
-)
+        message.innerText =
+          "✓ Appointment confirmed successfully.";
 
-.finally(
-function(){
+        message.style.color =
+          "#079b92";
 
-submitButton.disabled =
-false;
 
-submitButton.innerText =
-"Confirm Appointment";
+        /*
+          Clear form.
+        */
 
-}
-);
+        form.reset();
+
+        department.value =
+          "";
+
+
+        appointmentTime.value =
+          "";
+
+        slotGrid.innerHTML =
+          "";
+
+        selectedTimeBox.style.display =
+          "none";
+
+        slotStatus.innerText =
+          "Select a doctor and date.";
+
+      }
+
+      else{
+
+        message.innerText =
+          result.message ||
+          "Appointment could not be booked.";
+
+        message.style.color =
+          "#b42318";
+
+
+        /*
+          Refresh slots.
+        */
+
+        if(
+          doctor.value &&
+          dateInput.value
+        ){
+
+          loadAvailableSlots();
+
+        }
+
+      }
+
+    }
+  )
+
+  .catch(
+    function(error){
+
+      console.error(
+        error
+      );
+
+
+      message.innerText =
+        "Unable to connect to the booking system. Please try again.";
+
+      message.style.color =
+        "#b42318";
+
+    }
+  )
+
+  .finally(
+    function(){
+
+      submitButton.disabled =
+        false;
+
+      submitButton.innerText =
+        "Confirm Appointment";
+
+    }
+  );
 
 });
+
 
 </script>
 
