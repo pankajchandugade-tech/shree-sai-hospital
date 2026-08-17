@@ -561,11 +561,93 @@ font-weight:bold;
 cursor:pointer;
 }
 
+.submit-btn:disabled{
+opacity:.65;
+cursor:not-allowed;
+}
+
 .message{
 text-align:center;
 font-size:12px;
 font-weight:bold;
 margin-top:10px;
+}
+
+/* BOOKING CALENDAR */
+
+.booking-calendar{
+margin-bottom:22px;
+}
+
+.booking-step{
+margin-bottom:16px;
+}
+
+.booking-step label{
+display:block;
+font-size:10px;
+font-weight:bold;
+margin-bottom:7px;
+}
+
+.doctor-select,
+.date-select{
+width:100%;
+}
+
+.slot-grid{
+display:grid;
+grid-template-columns:repeat(3,1fr);
+gap:9px;
+margin-top:8px;
+}
+
+.slot-btn{
+border:1px solid #cfe0e4;
+background:#fff;
+color:#17323b;
+padding:10px 7px;
+border-radius:8px;
+cursor:pointer;
+font-weight:bold;
+font-size:12px;
+}
+
+.slot-btn:hover{
+border-color:#079b92;
+color:#079b92;
+}
+
+.slot-btn.selected{
+background:#079b92;
+color:#fff;
+border-color:#079b92;
+}
+
+.slot-btn.booked,
+.slot-btn:disabled{
+background:#eef2f3;
+color:#9aa8ad;
+border-color:#dce5e8;
+cursor:not-allowed;
+text-decoration:line-through;
+}
+
+.slot-status{
+font-size:11px;
+color:#70828a;
+margin-top:7px;
+}
+
+.selected-slot{
+background:#e7f7f5;
+border:1px solid #bfe7e2;
+padding:10px;
+border-radius:8px;
+font-size:12px;
+font-weight:bold;
+margin-top:10px;
+display:none;
 }
 
 /* MAP */
@@ -677,6 +759,10 @@ gap:5px;
 .quick-grid,
 .facility-list{
 grid-template-columns:1fr;
+}
+
+.slot-grid{
+grid-template-columns:repeat(2,1fr);
 }
 
 .hero h1{
@@ -1050,24 +1136,24 @@ Plan your visit.
 </h2>
 
 <p>
-Send an appointment request and our hospital team can contact you to confirm the appropriate doctor, date and time.
+Choose your doctor, select a date and pick an available 30-minute appointment slot.
 </p>
 
 <div class="trust">
 
 <div>
 <span>✓</span>
-Simple appointment request
+Choose your doctor
 </div>
 
 <div>
 <span>✓</span>
-Quick hospital follow-up
+Select a convenient time
 </div>
 
 <div>
 <span>✓</span>
-Patient-friendly process
+Appointment confirmation
 </div>
 
 </div>
@@ -1077,28 +1163,124 @@ Patient-friendly process
 <div class="form">
 
 <h3>
-Appointment Request
+Book an Appointment
 </h3>
 
 <div class="form-subtitle">
-Fields marked * are required.
+Select doctor, date and available time. Fields marked * are required.
 </div>
 
 <form id="appointmentForm">
 
+<div class="booking-calendar">
+
+<div class="booking-step">
+
+<label for="doctor">
+SELECT DOCTOR *
+</label>
+
+<select
+id="doctor"
+name="doctor"
+class="doctor-select"
+required>
+
+<option value="">
+Select Doctor
+</option>
+
+<option
+value="Dr. Aarav Mehta"
+data-department="General Medicine">
+
+Dr. Aarav Mehta — General Medicine
+
+</option>
+
+<option
+value="Dr. Neha Shah"
+data-department="General Surgery">
+
+Dr. Neha Shah — General Surgery
+
+</option>
+
+<option
+value="Dr. Riya Kulkarni"
+data-department="Obstetrics & Gynaecology">
+
+Dr. Riya Kulkarni — Obstetrics & Gynaecology
+
+</option>
+
+</select>
+
+</div>
+
+<div class="booking-step">
+
+<label for="appointmentDate">
+SELECT DATE *
+</label>
+
+<input
+id="appointmentDate"
+type="date"
+name="date"
+class="date-select"
+required>
+
+<div
+class="slot-status"
+id="slotStatus">
+
+Select a doctor and date to see available appointment times.
+
+</div>
+
+<div
+class="slot-grid"
+id="slotGrid">
+</div>
+
+<div
+class="selected-slot"
+id="selectedSlot">
+</div>
+
+<input
+type="hidden"
+id="appointmentTime"
+name="time"
+required>
+
+</div>
+
+</div>
+
 <div class="form-grid">
 
 <div class="form-group">
-<label>PATIENT NAME *</label>
+
+<label>
+PATIENT NAME *
+</label>
+
 <input
 type="text"
 name="patientName"
 required
 placeholder="Patient full name">
+
 </div>
 
 <div class="form-group">
-<label>MOBILE NUMBER *</label>
+
+<label>
+MOBILE NUMBER *
+</label>
+
 <input
 type="tel"
 name="mobile"
@@ -1106,69 +1288,39 @@ required
 pattern="[0-9]{10}"
 maxlength="10"
 placeholder="10-digit mobile">
-</div>
-
-<div class="form-group">
-<label>DEPARTMENT *</label>
-
-<select name="department" required>
-
-<option value="">
-Select Department
-</option>
-
-<option>
-General Medicine
-</option>
-
-<option>
-General Surgery
-</option>
-
-<option>
-Obstetrics & Gynaecology
-</option>
-
-<option>
-Paediatrics
-</option>
-
-</select>
 
 </div>
 
 <div class="form-group">
 
-<label>PREFERRED DATE</label>
+<label>
+DEPARTMENT
+</label>
 
 <input
-type="date"
-name="preferredDate">
+type="text"
+id="department"
+name="department"
+readonly
+placeholder="Selected automatically">
 
 </div>
 
 <div class="form-group">
 
-<label>PREFERRED TIME</label>
-
-<select name="preferredTime">
-
-<option>Morning</option>
-<option>Afternoon</option>
-<option>Evening</option>
-
-</select>
-
-</div>
-
-<div class="form-group">
-
-<label>CONTACT METHOD</label>
+<label>
+CONTACT METHOD
+</label>
 
 <select name="contactMethod">
 
-<option>Phone</option>
-<option>WhatsApp</option>
+<option>
+Phone
+</option>
+
+<option>
+WhatsApp
+</option>
 
 </select>
 
@@ -1178,11 +1330,14 @@ name="preferredDate">
 
 <div class="form-group">
 
-<label>BRIEF REQUIREMENT</label>
+<label>
+BRIEF REQUIREMENT
+</label>
 
 <textarea
-name="message"
+name="reason"
 rows="4"
+maxlength="500"
 placeholder="Briefly describe your appointment requirement">
 </textarea>
 
@@ -1190,7 +1345,9 @@ placeholder="Briefly describe your appointment requirement">
 
 <div class="checkbox">
 
-<input type="checkbox" required>
+<input
+type="checkbox"
+required>
 
 <span>
 I agree to be contacted regarding this appointment request. Please do not submit passwords, OTPs, PINs or payment credentials through this form.
@@ -1202,7 +1359,7 @@ I agree to be contacted regarding this appointment request. Please do not submit
 class="submit-btn"
 type="submit">
 
-Request Appointment
+Confirm Appointment
 
 </button>
 
@@ -1292,23 +1449,702 @@ Shree Sai Multispeciality Hospital
 
 <script>
 
+/* ==========================================
+   GOOGLE APPS SCRIPT CONNECTION
+   ========================================== */
+
+const GOOGLE_SCRIPT_URL =
+"https://script.google.com/macros/s/AKfycbwEnBYXxJPmpGkz2Ci4MQFq81IvwPk9erNFTWcAFKodU4bPZlDBUQcVcyFgrUeJOor0Ng/exec";
+
+
+/* ==========================================
+   ELEMENTS
+   ========================================== */
+
 const form =
 document.getElementById("appointmentForm");
+
+const doctor =
+document.getElementById("doctor");
+
+const dateInput =
+document.getElementById("appointmentDate");
+
+const department =
+document.getElementById("department");
+
+const slotGrid =
+document.getElementById("slotGrid");
+
+const slotStatus =
+document.getElementById("slotStatus");
+
+const selectedSlot =
+document.getElementById("selectedSlot");
+
+const appointmentTime =
+document.getElementById("appointmentTime");
 
 const message =
 document.getElementById("message");
 
-form.addEventListener("submit", function(event){
+
+/* ==========================================
+   TODAY'S DATE
+   ========================================== */
+
+const today =
+new Date();
+
+const yyyy =
+today.getFullYear();
+
+const mm =
+String(today.getMonth() + 1)
+.padStart(2,"0");
+
+const dd =
+String(today.getDate())
+.padStart(2,"0");
+
+dateInput.min =
+`${yyyy}-${mm}-${dd}`;
+
+
+/* ==========================================
+   APPOINTMENT TIME SLOTS
+
+   These are 30-minute slots.
+   ========================================== */
+
+const SLOTS = [
+
+"09:00",
+"09:30",
+"10:00",
+"10:30",
+"11:00",
+"11:30",
+"12:00",
+"12:30",
+
+"17:00",
+"17:30",
+"18:00",
+"18:30",
+"19:00",
+"19:30"
+
+];
+
+
+/* ==========================================
+   DOCTOR CHANGE
+   ========================================== */
+
+doctor.addEventListener(
+"change",
+function(){
+
+const option =
+doctor.options[
+doctor.selectedIndex
+];
+
+department.value =
+option
+? (option.dataset.department || "")
+: "";
+
+clearSelectedSlot();
+
+if(
+doctor.value &&
+dateInput.value
+){
+
+loadAvailableSlots();
+
+}
+
+});
+
+
+/* ==========================================
+   DATE CHANGE
+   ========================================== */
+
+dateInput.addEventListener(
+"change",
+function(){
+
+clearSelectedSlot();
+
+if(
+doctor.value &&
+dateInput.value
+){
+
+loadAvailableSlots();
+
+}else{
+
+slotGrid.innerHTML = "";
+
+slotStatus.textContent =
+"Select a doctor and date to see available appointment times.";
+
+}
+
+});
+
+
+/* ==========================================
+   CLEAR SELECTED SLOT
+   ========================================== */
+
+function clearSelectedSlot(){
+
+appointmentTime.value =
+"";
+
+selectedSlot.style.display =
+"none";
+
+selectedSlot.textContent =
+"";
+
+}
+
+
+/* ==========================================
+   LOAD AVAILABLE SLOTS
+
+   Slots are displayed immediately.
+   Google Calendar is then checked to
+   disable already-booked slots.
+   ========================================== */
+
+function loadAvailableSlots(){
+
+slotGrid.innerHTML =
+"";
+
+clearSelectedSlot();
+
+if(
+!doctor.value ||
+!dateInput.value
+){
+
+slotStatus.textContent =
+"Select a doctor and date to see available appointment times.";
+
+return;
+
+}
+
+
+/*
+Show all slots immediately.
+*/
+
+renderSlots([]);
+
+
+slotStatus.textContent =
+"Available times are shown below. Checking booked times...";
+
+
+/*
+Ask Google Apps Script which slots
+are already booked.
+*/
+
+const url =
+GOOGLE_SCRIPT_URL +
+"?date=" +
+encodeURIComponent(
+dateInput.value
+);
+
+
+fetch(
+url,
+{
+method:"GET"
+}
+)
+
+.then(
+function(response){
+
+return response.json();
+
+}
+)
+
+.then(
+function(data){
+
+if(
+!data.success
+){
+
+throw new Error(
+data.message ||
+"Unable to check availability."
+);
+
+}
+
+const booked =
+Array.isArray(
+data.bookedSlots
+)
+? data.bookedSlots
+: [];
+
+
+renderSlots(
+booked
+);
+
+
+slotStatus.textContent =
+"Select an available 30-minute appointment time.";
+
+}
+)
+
+.catch(
+function(error){
+
+console.error(error);
+
+
+/*
+Keep slots visible even if the
+Calendar check temporarily fails.
+*/
+
+slotStatus.textContent =
+"Select an appointment time below.";
+
+}
+
+);
+
+}
+
+
+/* ==========================================
+   DISPLAY TIME SLOTS
+   ========================================== */
+
+function renderSlots(
+booked
+){
+
+slotGrid.innerHTML =
+"";
+
+
+if(
+!doctor.value ||
+!dateInput.value
+){
+
+return;
+
+}
+
+
+SLOTS.forEach(
+function(time){
+
+const button =
+document.createElement(
+"button"
+);
+
+button.type =
+"button";
+
+button.className =
+"slot-btn";
+
+button.textContent =
+formatTime(
+time
+);
+
+
+/*
+If Google Calendar says the slot
+is booked, disable it.
+*/
+
+if(
+booked.includes(
+time
+)
+){
+
+button.classList.add(
+"booked"
+);
+
+button.disabled =
+true;
+
+}else{
+
+button.addEventListener(
+"click",
+function(){
+
+document
+.querySelectorAll(
+".slot-btn"
+)
+.forEach(
+function(btn){
+
+btn.classList.remove(
+"selected"
+);
+
+}
+);
+
+
+button.classList.add(
+"selected"
+);
+
+
+appointmentTime.value =
+time;
+
+
+selectedSlot.style.display =
+"block";
+
+
+selectedSlot.textContent =
+"Selected: " +
+formatDate(
+dateInput.value
+) +
+" at " +
+formatTime(
+time
+);
+
+}
+);
+
+}
+
+
+slotGrid.appendChild(
+button
+);
+
+}
+);
+
+}
+
+
+/* ==========================================
+   FORMAT TIME
+   ========================================== */
+
+function formatTime(
+time
+){
+
+const parts =
+time.split(":");
+
+let hour =
+Number(parts[0]);
+
+const minutes =
+parts[1];
+
+const suffix =
+hour >= 12
+? "PM"
+: "AM";
+
+hour =
+hour % 12 || 12;
+
+return (
+hour +
+":" +
+minutes +
+" " +
+suffix
+);
+
+}
+
+
+/* ==========================================
+   FORMAT DATE
+   ========================================== */
+
+function formatDate(
+dateString
+){
+
+const date =
+new Date(
+dateString +
+"T00:00:00"
+);
+
+return date.toLocaleDateString(
+"en-IN",
+{
+day:"numeric",
+month:"short",
+year:"numeric"
+}
+);
+
+}
+
+
+/* ==========================================
+   SUBMIT APPOINTMENT
+   ========================================== */
+
+form.addEventListener(
+"submit",
+function(event){
 
 event.preventDefault();
 
-message.innerHTML =
-"Thank you! Your appointment request has been received.";
+message.textContent =
+"";
+
+message.style.color =
+"";
+
+
+/*
+Make sure doctor is selected.
+*/
+
+if(
+!doctor.value
+){
+
+message.textContent =
+"Please select a doctor.";
+
+message.style.color =
+"#b42318";
+
+return;
+
+}
+
+
+/*
+Make sure date is selected.
+*/
+
+if(
+!dateInput.value
+){
+
+message.textContent =
+"Please select an appointment date.";
+
+message.style.color =
+"#b42318";
+
+return;
+
+}
+
+
+/*
+Make sure a time button was clicked.
+*/
+
+if(
+!appointmentTime.value
+){
+
+message.textContent =
+"Please click one of the appointment time buttons.";
+
+message.style.color =
+"#b42318";
+
+return;
+
+}
+
+
+const formData =
+new FormData(
+form
+);
+
+
+const data = {
+
+patientName:
+formData.get(
+"patientName"
+),
+
+mobile:
+formData.get(
+"mobile"
+),
+
+doctor:
+formData.get(
+"doctor"
+),
+
+department:
+formData.get(
+"department"
+),
+
+date:
+formData.get(
+"date"
+),
+
+time:
+formData.get(
+"time"
+),
+
+reason:
+formData.get(
+"reason"
+) || "",
+
+contactMethod:
+formData.get(
+"contactMethod"
+) || "Phone"
+
+};
+
+
+const submitButton =
+form.querySelector(
+".submit-btn"
+);
+
+
+submitButton.disabled =
+true;
+
+submitButton.textContent =
+"Booking...";
+
+
+message.textContent =
+"Confirming your appointment...";
 
 message.style.color =
 "#079b92";
 
+
+/*
+Send booking to Google Apps Script.
+*/
+
+fetch(
+GOOGLE_SCRIPT_URL,
+{
+
+method:"POST",
+
+mode:"no-cors",
+
+headers:{
+"Content-Type":
+"text/plain;charset=utf-8"
+},
+
+body:
+JSON.stringify(
+data
+)
+
+}
+)
+
+.then(
+function(){
+
+message.textContent =
+"Appointment request sent successfully.";
+
+message.style.color =
+"#079b92";
+
+
 form.reset();
+
+department.value =
+"";
+
+slotGrid.innerHTML =
+"";
+
+
+slotStatus.textContent =
+"Select a doctor and date to see available appointment times.";
+
+
+clearSelectedSlot();
+
+}
+)
+
+.catch(
+function(error){
+
+console.error(
+error
+);
+
+message.textContent =
+"Unable to send the appointment. Please call the hospital.";
+
+message.style.color =
+"#b42318";
+
+}
+)
+
+.finally(
+function(){
+
+submitButton.disabled =
+false;
+
+submitButton.textContent =
+"Confirm Appointment";
+
+}
+);
 
 });
 
